@@ -119,7 +119,7 @@ G4VPhysicalVolume *LBCDetectorConstruction::Construct()
 	G4double r_max_tablet = 6.5 * mm;
 	G4Tubs *solidSource = new G4Tubs("solidSource", r_min_tablet, r_max_tablet, thickness, 0. * deg, 360. * deg);
 	G4LogicalVolume *logicSource = new G4LogicalVolume(solidSource, tablet, "logicSource");
-	G4VPhysicalVolume *physSource = new G4PVPlacement(rotationSource, G4ThreeVector(-1.3 * cm, 0., 8.5 * cm), logicSource,"physSource", logicWorld, false, 0, checkOverlaps);
+	G4VPhysicalVolume *physSource = new G4PVPlacement(rotationSource, G4ThreeVector(-1.3 * cm - thickness, 0., 8.5 * cm), logicSource,"physSource", logicWorld, false, 0, checkOverlaps);
 
 
 
