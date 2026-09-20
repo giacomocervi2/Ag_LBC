@@ -34,11 +34,10 @@ if (fTotalEnergyDeposited > 0.)
 	{
 		G4AnalysisManager *analysisManager = G4AnalysisManager::Instance();
 
-		// Riempie l'istogramma 1D (H1) con l'energia totale dell'evento
+		
 		analysisManager->FillH1(0, fTotalEnergyDeposited);
 
-		// SALVATAGGIO NTUPLE (TTREE)
-		// Salva una singola riga per evento con l'energia totale
+		
 		G4int eventID = G4RunManager::GetRunManager()->GetCurrentEvent()->GetEventID();
 		analysisManager->FillNtupleIColumn(0, 0, eventID);
 		analysisManager->FillNtupleDColumn(0, 1, fTotalEnergyDeposited);
