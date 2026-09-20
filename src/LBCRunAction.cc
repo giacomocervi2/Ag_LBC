@@ -6,15 +6,11 @@ LBCRunAction::LBCRunAction()
 
     analysisManager->CreateH1("Edep","Energy deposited", 3000, 0., 3 * MeV);
 
-    analysisManager->CreateNtuple("Photons","Photons"); //we create an Ntuple to store photons informations
-    analysisManager->CreateNtupleIColumn("iEvent"); //I stands for integer (we want to store the number of events)
-    analysisManager->CreateNtupleDColumn("fX"); //D (f in the name would be float) stands for double (we want to store the x position of the event)
-    analysisManager->CreateNtupleDColumn("fY");
-    analysisManager->CreateNtupleDColumn("fZ");
-    analysisManager->CreateNtupleDColumn("fGlobalTime"); //record the global time since start acquisition
-    analysisManager->CreateNtupleDColumn("fWlen"); //record wave-lenght of the photons
-    analysisManager->FinishNtuple(0); //the defintion of the Ntuple columns is finisged
-
+    
+    analysisManager->CreateNtuple("Events","Events Data"); 
+    analysisManager->CreateNtupleIColumn("iEvent");           
+    analysisManager->CreateNtupleDColumn("fEnergyDeposited"); 
+    analysisManager->FinishNtuple(0); 
 }
 
 LBCRunAction::~LBCRunAction()
