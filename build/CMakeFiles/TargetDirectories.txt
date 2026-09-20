@@ -1,4 +1,0 @@
-/home/cervig/Ag_LBC/build/CMakeFiles/rebuild_cache.dir
-/home/cervig/Ag_LBC/build/CMakeFiles/edit_cache.dir
-/home/cervig/Ag_LBC/build/CMakeFiles/LBC.dir
-/home/cervig/Ag_LBC/build/CMakeFiles/sim.dir
